@@ -1,0 +1,196 @@
+/* fonte: */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+/* configuração geral inicial */
+* { /* zerar as margens e espaçamentos padrões dos navegadores */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* do padding, para não aumentar elemento. */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* ---------------------------------------------------- */
+
+/* PARTE SUPERIOR DO SITE (HEADER): */
+header {
+    height: 50vh;
+    /*
+    height: 50vmax;
+    height: 50vmin;
+    */
+    
+    background-color: #555e99;
+
+    display: flex;
+    flex-direction: column; /* alinhar um embaixo do outro*/
+    justify-content: space-between; /* deixar itens com espaços entre eles */
+
+    padding-top: 20px; /* espaçamento interno do elemento */
+    padding-bottom: 25px; 
+    /* border box já definido nas configurações gerais */
+}
+
+/* ELEMENTOS INTERNOS DO HEADER: */
+#title {
+    align-self: center;
+    font-size: 23px;
+    
+}
+
+#img {
+    align-self: center;
+}
+
+#class {
+    align-self: flex-end;
+    margin-right: 10px;
+    font-style: oblique;
+}
+#welcome {
+    align-self: flex-end;
+    margin-right: 10px;
+    color:  gray;
+}
+/* ESTILIZANDO AS FONTES: */
+h1, h2 {
+    
+    color: white;
+}
+
+
+
+/* ---------------------------------------------------- */
+
+/* PARTE CENTRAL DO SITE (MAIN): */
+main {
+    height: 35vh;
+    /*
+    height: 35vmax; 
+    height: 35vmin;
+    */
+    
+    background-color: #eb4b00;
+   
+    display: flex;
+    justify-content: space-around; /* espaçamento ao redor de todo elemento e nao somente entre */
+    align-items: center; /* alinhar ao centro no eixo y */
+
+    
+}
+
+/* ELEMENTOS INTERNOS DO MAIN: */
+.square {
+    width: 226px;
+    height: 142px;
+
+    background-color: white;
+
+    display: flex;
+    align-items: center; /* alinhar eixo y */
+    justify-content: center; /* alinhar no eixo x */
+}
+/* ESTILIZAR A FONTE DO TEXTO DENTRO DOS QUADRADOS: */
+.square h3 {
+    color: #eb4b00;
+    font-size: 25px;
+}
+
+
+/* ---------------------------------------------------- */
+
+/* PARTE INFERIOR DO SITE (FOOTER) */
+footer {
+    height: 15vh;
+    /*
+    height: 15vmax; 
+    height: 15vmin;
+    */
+
+    display: flex;
+    align-items: center; /* alinhar eixo y */
+    justify-content: center; /* alinhar no eixo x */
+    
+}
+/* BOTÃO ENVIAR DO FORM: */
+.submit {
+    background-color: #eb4b00;
+    color: white;
+
+    width: 100px;
+    height: 50px;
+
+}
+/* INPUT DO RODAPÉ: */
+#email {
+    width: 340px;
+    height: 50px;
+
+}
+
+/* ---------------------------------------------------- */
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-device-width: 700px) { /* PARA CELULARES E OUTROS DISPOSITIVOS: */
+    #img img {
+        width: 800px;
+        height: 400px;
+    }
+
+    .square {
+        width: 250px;
+        height: 350px;
+    }
+
+    #title {
+        font-size: 45px;
+        
+    }
+
+    #class {
+        margin-right: 20px;
+        font-style: oblique;
+        font-size: 28px;
+    }
+
+    .square h3 {
+        font-size: 40px;
+    }
+
+    .submit {
+    
+        width: 200px;
+        height: 120px;
+        
+        font-size: 40px;
+    }
+
+    #email {
+        width: 650px;
+        height: 120px;
+        font-size: 40px;
+    
+    }
+    
+    #welcome {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 700px) { /* NO PC QUANDO DIMINUI A TELA: */
+    #img img {
+        width: 350px;
+        height: 180px;
+    }
+
+    .square {
+        width: 150px;
+        height: 90px;
+    }
+
+    
+}
